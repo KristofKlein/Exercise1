@@ -1,3 +1,8 @@
 {
-    "workbench.colorTheme": "Default Dark+"
+    "workbench.colorTheme": "Default Dark+",
+        "al.codeAnalyzers": [
+        "${CodeCop}","${UICop}"],
+        "al.enableCodeAnalysis": true,
+        "al.enableCodeActions": true
+    
 }

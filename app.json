@@ -1,13 +1,13 @@
 {
   "id": "7c0e5710-ce02-48e9-8936-2ae902259353",
-  "name": "Exercise1",
-  "publisher": "Default publisher",
+  "name": "Cars Dealer Platform",
+  "publisher": "Kristof Klein",
   "version": "1.0.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
   "EULA": "",
-  "help": "",
+  "help": "https://www.help.no",
   "url": "",
   "logo": "",
   "dependencies": [
@@ -28,8 +28,8 @@
   "platform": "15.0.0.0",
   "idRanges": [
     {
-      "from": 50100,
-      "to": 50149
+      "from": 70100,
+      "to": 70149
     }
   ],
   "contextSensitiveHelpUrl": "https://Exercise1.com/help/",
