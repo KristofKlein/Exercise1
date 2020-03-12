@@ -7,7 +7,7 @@
             "name": "AL Exercise Container",
             "server": "http://ALGO",
             "serverInstance": "BC",
-            "authentication": "UserPassword",
+            "authentication": "Windows",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": true,
