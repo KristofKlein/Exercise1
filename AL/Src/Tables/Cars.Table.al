@@ -35,8 +35,8 @@ table 70100 Cars
             trigger OnValidate()
             begin
                 if Rec.Reserved = true then begin
-                    Rec.ReservedAt := WorkDate;
-                    rec.ReservedBy := UserId;
+                    Rec.ReservedAt := WorkDate();
+                    rec.ReservedBy := COPYSTR(UserId(), 1, 250);
                 end else begin
                     Rec.ReservedAt := 0D;
                     Rec.ReservedBy := '';
@@ -60,11 +60,11 @@ table 70100 Cars
     }
     procedure HandleReservation()
     begin
-        if Reserved then begin
-            rec.Validate(Reserved, false);
-        end else begin
+        if Reserved then
+            rec.Validate(Reserved, false)
+        else
             rec.Validate(Reserved, true);
-        end;
+
 
         Rec.Modify(true);
 

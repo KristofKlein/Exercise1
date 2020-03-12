@@ -41,7 +41,7 @@ page 70100 CarList
             action(ToggleReservation)
             {
                 ApplicationArea = All;
-
+                image = Reserve;
                 trigger OnAction()
                 begin
                     rec.HandleReservation();

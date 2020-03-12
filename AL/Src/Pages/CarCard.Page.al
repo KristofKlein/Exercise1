@@ -66,6 +66,7 @@ page 70101 CarCard
             action(ToggleReservation)
             {
                 ApplicationArea = All;
+                Image = Reserve;
 
                 trigger OnAction()
                 begin
@@ -74,7 +75,4 @@ page 70101 CarCard
             }
         }
     }
-
-    var
-        myInt: Integer;
 }
