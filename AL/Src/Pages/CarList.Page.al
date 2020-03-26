@@ -1,4 +1,4 @@
-page 70100 CarList
+page 70100 "CarList"
 {
     PageType = List;
     Caption = 'Cars';
@@ -43,8 +43,10 @@ page 70100 CarList
                 ApplicationArea = All;
                 image = Reserve;
                 trigger OnAction()
+                var
+                    CarReservation: Codeunit CarReservation;
                 begin
-                    rec.HandleReservation();
+                    CarReservation.ReserveCar(rec);
                 end;
             }
         }

@@ -1,4 +1,4 @@
-table 70100 Cars
+table 70100 "Cars"
 {
     DataClassification = SystemMetadata;
 
@@ -48,7 +48,9 @@ table 70100 Cars
         {
         }
         field(10; ReservedAt; Date) { }
-
+        field(11; DealChance; Enum DealChance)
+        {
+        }
     }
 
     keys
@@ -58,17 +60,4 @@ table 70100 Cars
             Clustered = true;
         }
     }
-    procedure HandleReservation()
-    begin
-        if Reserved then
-            rec.Validate(Reserved, false)
-        else
-            rec.Validate(Reserved, true);
-
-
-        Rec.Modify(true);
-
-
-    end;
-
 }

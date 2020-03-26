@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "GitHub Sharp Dark",
         "al.codeAnalyzers": [
         "${CodeCop}","${UICop}"],
         "al.enableCodeAnalysis": true,

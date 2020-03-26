@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "echo",
             "args": [
-                "Hello World!"
+                "Hello ${input:Pswd}"
             ]
         },
         {
@@ -16,6 +16,14 @@
             "type": "shell",
             "command": "${workspaceFolder}\\Powershell\\Al.ps1",
             "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "Pswd",
+            "description": "Pswd?",
+            "type": "promptString",
+            "password": true
         }
     ]
 }

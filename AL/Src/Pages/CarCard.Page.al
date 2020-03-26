@@ -1,4 +1,4 @@
-page 70101 CarCard
+page 70101 "CarCard"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -54,6 +54,11 @@ page 70101 CarCard
                 {
                     ApplicationArea = All;
                 }
+                field(Chance; DealChance)
+                {
+                    ApplicationArea = All;
+                }
+
             }
 
         }
@@ -69,8 +74,23 @@ page 70101 CarCard
                 Image = Reserve;
 
                 trigger OnAction()
+                var
+                    CarReservation: Codeunit CarReservation;
+
+                    EnumHelper: Codeunit EnumHelper;
+                    _DealChance: Enum DealChance;
+
                 begin
-                    rec.HandleReservation();
+                    if rec.Reserved = false then begin
+                        if Dialog.Confirm('Want to apply a winning chance as well?') then begin
+                            _DealChance := Dialog.StrMenu(EnumHelper.EnumToCommaSeperatedText(_DealChance), 2);
+                            if (_DealChance <> 0) then
+                                CarReservation.ReserveCar(rec, _DealChance);
+                        end else
+                            CarReservation.ReserveCar(rec);
+                    end
+                    else
+                        CarReservation.ReserveCar(rec);
                 end;
             }
         }

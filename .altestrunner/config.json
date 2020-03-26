@@ -1,0 +1,13 @@
+{
+    "containerResultPath":  "",
+    "launchConfigName":  "AL Exercise Container",
+    "securePassword":  "",
+    "userName":  "",
+    "companyName":  "CRONUS International Ltd.",
+    "testSuiteName":  "",
+    "vmUserName":  "",
+    "vmSecurePassword":  "",
+    "remoteContainerName":  "",
+    "dockerHost":  "",
+    "newPSSessionOptions":  ""
+}
