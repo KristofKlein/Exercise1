@@ -1,1 +1,5 @@
 *.app
+.alcache
+.alpackages
+.altemplates
+.altestrunner

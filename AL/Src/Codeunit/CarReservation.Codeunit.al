@@ -13,4 +13,18 @@ codeunit 70112 "CarReservation"
     begin
         IMpl.ReserveCar(Car, DealChance)
     end;
+
+
+
+    procedure OpenFreeCars(var x: Notification);
+    var
+        Cars: Record Cars;
+        CarsList: Page CarList;
+    begin
+        Cars.Reset();
+        Cars.SetRange(Reserved, false);
+
+        CarsList.SetRecord(Cars);
+        CarsList.Run();
+    end;
 }
